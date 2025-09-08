@@ -37,36 +37,37 @@ create table personagem (
 
 select * from filme;
 select * from ator;
+select * from personagem;
 
 insert into filme values 
-('f1', 'A Jurada', '1996', '1000000', '18'),
-('f10', 'Cidade das Sombras', '1997', '10000000', '7'),
-('f11', 'Irresistível Paixão', '1998', '10000000', '10'),
-('f12', 'A Máscara do Zorro', '1998', '11000000', '11'),
-('f13', 'Quem vai ficar com Marry?', '1997', '6000000', '8'),
-('f14', 'O Resgate do Soldado Ryan', '1997', '10000000', '7'),
-('f15', 'O Show de Truman', '1998', '10000000', '14'),
-('f16', 'Batman, o Filme', '1995', '10000000', '9'),
-('f17', 'Filadélfia', '1996', '10000000', '6'),
-('f18', 'O Máscara', '1995', '6000000','7'),
-('f19', 'O Beijo da Mulher Aranha', '1990', '8000000','24'),
-('f2', 'A Letra Escarlate', '1995', '10000000','24'),
-('f20', 'O Pacificador', '1997', '10000000','15'),
-('f21', 'Ace Ventura', '1995', '7000000','12'),
-('f22', 'Chaplin', '1993', '8000000','14'),
-('f23', 'Batman e Robin', '1997', '10000000','20'),
-('f24', 'Strip Tease', '1996', '7000000','12'),
-('f25', 'Passageiro 57', '1993', '200000000','15'),
-('f26', 'Forrest Gump', '1996', '90000000','15'),
-('f3', 'Seven', '1995', '15000000','20'),
-('f4', 'Tootsie', '1982', '5000000','16'),
-('f5', 'Tieta', '1995', '2000000','18'),
-('f6', 'Código de Violência', '1997', '10000000','15'),
-('f7', 'Quando o Amor Acontece', '1998', '5000000','12'),
-('f8', 'A vingança de Bette', '1998', '10000000','9'),
-('f9', 'Blade, o Caçador de Vampiros', '1998', '100000000','18');
+('f1', 'A Jurada', 1996, 1000000, 18),
+('f10', 'Cidade das Sombras', 1997, 10000000, 7),
+('f11', 'Irresistível Paixão', 1998, 10000000, 10),
+('f12', 'A Máscara do Zorro', 1998, 11000000, 11),
+('f13', 'Quem vai ficar com Marry?', 1997, 6000000, 8),
+('f14', 'O Resgate do Soldado Ryan', 1997, 10000000, 7),
+('f15', 'O Show de Truman', 1998, 10000000, 14),
+('f16', 'Batman, o Filme', 1995, 10000000, 9),
+('f17', 'Filadélfia', 1996, 10000000, 6),
+('f18', 'O Máscara', 1995, 6000000, 7),
+('f19', 'O Beijo da Mulher Aranha', 1990, 8000000, 24),
+('f2', 'A Letra Escarlate', 1995, 10000000, 24),
+('f20', 'O Pacificador', 1997, 10000000, 15),
+('f21', 'Ace Ventura', 1995, 7000000, 12),
+('f22', 'Chaplin', 1993, 8000000, 14),
+('f23', 'Batman e Robin', 1997, 10000000, 20),
+('f24', 'Strip Tease', 1996, 7000000, 12),
+('f25', 'Passageiro 57', 1993, 200000000, 15),
+('f26', 'Forrest Gump', 1996, 90000000, 15),
+('f3', 'Seven', 1995, 15000000, 20),
+('f4', 'Tootsie', 1982, 5000000, 16),
+('f5', 'Tieta', 1995, 2000000, 18),
+('f6', 'Código de Violência', 1997, 10000000, 15),
+('f7', 'Quando o Amor Acontece', 1998, 5000000, 12),
+('f8', 'A vingança de Bette', 1998, 10000000, 9),
+('f9', 'Blade, o Caçador de Vampiros', 1998, 100000000, 18);
 
-INSERT INTO ator VALUES
+insert into ator values
 ('a1', 'Demi Moore', 'Maria da Silva', 'USA', 'F', 32, NULL, NULL),
 ('a10', 'Willian Hurt', 'Willian Ernst Hurt', 'USA', 'M', 45, 2, 1),
 ('a11', 'George Clooney', 'George Costa Smith', 'USA', 'M', 37, 1, NULL),
@@ -132,3 +133,14 @@ insert into personagem values
 ('f7', 'a8', 'Bill', 5000000),
 ('f8', 'a3', 'Bette', 3000000),
 ('f9', 'a9', 'Blade', 100000000);
+
+update ator set nacionalidade = 'Reino Unido' where nomeArtistico = 'Antony Hopkins';
+update ator set nomeArtistico = 'William Hurt' where nomeArtistico = 'Willian Hurt';
+update ator set idade = 36 where nomeArtistico = 'Nicole Kidman';
+update filme set orcamento = 2000000 where nomeFilme = 'Passageiro 57';
+update filme set nomeFilme = 'Quem vai ficar com Marry?' where nomeFilme = 'Quem vai ficar com Marry ?';
+update personagem set cache = 25000000 where codFilme = 'f26';
+update personagem set personagem = 'Stanley Ipkiss' where codAtor = 'a17';
+
+
+
