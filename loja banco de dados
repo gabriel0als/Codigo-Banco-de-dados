@@ -1,0 +1,47 @@
+create database loja;
+use loja;
+
+create table setor (
+	codSetor int primary key,
+    nomeSetor varchar(20) not null
+);
+
+create table funcionario (
+	codFuncionario int primary key,
+    nomeFuncionario varchar(20) not null,
+    CPF char(11) not null
+);
+
+create table pedido (
+	codPedido int primary key,
+    prazoEntrega date not null,
+    status varchar(20) not null,
+    prazoGarantia date not null,
+    pais varchar(20) not null,
+    cidade varchar(40) not null,
+    bairro varchar(40) not null,
+    rua varchar(40) not null,
+    numero int not null,
+    codFuncionario int,
+    codPosObra int,
+    codCliente int,
+    foreign key (codFuncionario) references funcionario(codFuncionario),
+    foreign key (codCliente) references cliente(codCliente)
+);
+
+create table cliente (
+	codCliente int primary key,
+    nomeCliente varchar(40) not null,
+    CPF int not null
+);
+
+create table produto (
+	codProduto int primary key,
+    materialProduto varchar(20) not null,
+    materialBatente varchar(20) not null,
+    materialVista varchar(20) not null,
+    modelo varchar(20) not null,
+    tipoVedacao varchar(20) not null,
+    tipoDobradica varchar(20) not null,
+    tipoFechadura varchar(20) not null
+);
