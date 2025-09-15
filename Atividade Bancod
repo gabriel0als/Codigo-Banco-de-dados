@@ -1,5 +1,5 @@
-create database atividade;
-use atividade;
+create database atividade2;
+use atividade2;
 
 describe ator;
 describe filme;
@@ -141,6 +141,18 @@ update filme set orcamento = 2000000 where nomeFilme = 'Passageiro 57';
 update filme set nomeFilme = 'Quem vai ficar com Marry?' where nomeFilme = 'Quem vai ficar com Marry ?';
 update personagem set cache = 25000000 where codFilme = 'f26';
 update personagem set personagem = 'Stanley Ipkiss' where codAtor = 'a17';
+update ator set nomeReal = 'William Bradley Pitt' where nomeArtistico = 'Brad Pitt';
+update filme set anoFilme = 1994 where nomeFilme = 'Forrest Gump';
+update filme set tempo = 120 where nomeFilme = 'A Jurada';
+delete from personagem where codAtor = 'a22';
+delete from personagem where codFilme = 'f5';
+delete from personagem where personagem = 'Aranha';
+delete from personagem where codAtor = 'a4';
+delete from personagem where codFilme = 'f1';
+delete from personagem where codFilme = 'f7';
+delete from filme where codFilme = 'f9';
+delete from personagem where codAtor = 'a3';
+delete from ator where nomeReal = 'Demi Moore';
 
 
 
